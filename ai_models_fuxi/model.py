@@ -114,7 +114,7 @@ class FuXi(Model):
         return models
     
     def get_init_time(self):
-        init_time = self.all_fields.order_by(valid_datetime="descending")[0].datetime()
+        init_time = self.all_fields.order_by(valid_datetime="descending")[0].datetime()["valid_time"]
         init_time = pd.to_datetime(init_time)
         return init_time
 

@@ -59,7 +59,7 @@ class FuXi(Model):
         [50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 850, 925, 1000],
     )
 
-    def __init__(self, num_threads=1, **kwargs):
+    def __init__(self, num_threads=256, **kwargs):
         super().__init__(**kwargs)
         self.num_threads = num_threads
         self.hour_steps = 6
